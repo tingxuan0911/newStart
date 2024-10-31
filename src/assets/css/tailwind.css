@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-blue: #4692c8;
+  --color-lightBlue: #eff3fc;
+  --color-orange: #f3884c;
+  --color-green: #77a88d;
+  --icon-color-main: #898989;
+  --selected-text-color: #3979a7;
+  --box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+
+  /* sidebar RWD */
+  --sidebar-m_pc-l_pc-max-width: 200px;
+  --sidebar-l_pc-xl_pc-max-width: 260px;
+  --sidebar-xl_pc-max-width: 260px;
+  --sidebar-noCollapse-width: 86px;
+
+  --sheet-border: #e8e8e8;
+  --sheet-head-background: #e8e8e8;
+  --sheet-head-text: #444444;
+  --sheet-cell-background: #ffffff;
+  --sheet-cell-text: #000000;
+  --sheet-time: #888888;
+  --sheet-active: #ffd5d5;
+}
+
+
+
+
+
+
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  width: 100%;
+  height: 64px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: var(--box-shadow);
+
+
+}
+.main {
+  margin-top: 14px;
+  height: calc(100dvh - 64px - 42px);
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: var(--box-shadow);
+}
+.boxShadow {
+  box-shadow: var(--box-shadow);
+}
+
+/* select style */
+.el-select-dropdown__item {
+  color: black;
+}
+.el-select-dropdown__item.is-selected {
+  color: var(--selected-text-color);
+}
+
+

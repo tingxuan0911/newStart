@@ -1,0 +1,50 @@
+// 手機板 主盤口表格單行高度
+// mediaQuery
+// $mobile_xs: 384;
+// $mobile_s: 480;
+// $mobile_m: 576;
+// $pad: 768;
+$m_pc: 1620;
+$l_pc: 1700;
+$xl_pc: 1920;
+
+$land: 'landscape';
+$port: 'portrait';
+
+@mixin min-dev($device_size){
+    @media(min-width:#{$device_size}px){
+        @content;
+    }
+}
+@mixin max-dev($device_size){
+    @media(max-width:#{$device_size - 1}px){
+        @content;
+    }
+}
+@mixin min-max-dev($device_size1,$device_size2){
+    @media(min-width:#{$device_size1}px) and (max-width:#{$device_size2 - 1}px){
+        @content;
+    }
+}
+@mixin min-dev-ori($device_size, $ori){
+    @media(min-width:#{$device_size}px) and (orientation:$ori){
+        @content;
+    }
+}
+@mixin max-dev-ori($device_size, $ori){
+    @media(max-width:#{$device_size - 1}px) and (orientation:$ori){
+        @content;
+    }
+}
+@mixin dev-ori($ori){
+    @media(orientation: $ori){
+        @content;
+    }
+}
+
+// RWD
+.hamburger {
+  @include min-dev($m_pc) {
+    display: none;
+  }
+}
